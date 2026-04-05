@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "praticien": "Clément Fabrié",
+    "specialite": "Ostéopathe D.O.",
+    "moyenne": 5.0,
+    "total": 56,
+    "repartition": {
+      "5": 56,
+      "4": 0,
+      "3": 0,
+      "2": 0,
+      "1": 0
+    },
+    "sources": ["Google", "ReflexOsteo"],
+    "derniere_maj": "2026-04-05"
+  },
+  "avis": [
+    {
+      "id": 1,
+      "auteur": "Marie-Christine V.",
+      "initiales": "M",
+      "couleur": "#E8710A",
+      "etoiles": 5,
+      "date": "2025-01-14",
+      "texte": "Clément est un ostéopathe doux et à l'écoute qui prend toujours le temps durant les séances. J'en ai testé plus de 10 sur Montpellier et il est vraiment le meilleur. Je le recommande sans hésiter à tout mon entourage.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "auteur": "Thomas R.",
+      "initiales": "T",
+      "couleur": "#1A73E8",
+      "etoiles": 5,
+      "date": "2024-11-20",
+      "texte": "Ce praticien écoute, analyse, agit... et tout se remet en place. Les douleurs disparaissent durablement, pas juste quelques jours. C'est rare et vraiment précieux.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "auteur": "Isabelle T.",
+      "initiales": "I",
+      "couleur": "#4285F4",
+      "etoiles": 5,
+      "date": "2024-09-05",
+      "texte": "Un professionnel d'une grande qualité doté d'une écoute et d'une main experte qui a soulagé tous mes maux. Je consulte régulièrement depuis deux ans et je ne changerai pour rien au monde.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "auteur": "Camille B.",
+      "initiales": "C",
+      "couleur": "#EA4335",
+      "etoiles": 5,
+      "date": "2024-06-18",
+      "texte": "Il manipule avec douceur mais très efficacement. J'avais des douleurs chroniques au niveau lombaire depuis des années, deux séances ont suffi pour que je retrouve une vraie mobilité.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "auteur": "Caroline H.",
+      "initiales": "C",
+      "couleur": "#E91E63",
+      "etoiles": 5,
+      "date": "2024-03-22",
+      "texte": "Consulté pour des douleurs cervicales persistantes suite à un accident. Clément a identifié le problème rapidement, expliqué chaque geste et le traitement a été immédiatement efficace. Note 5/5 amplement méritée.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "auteur": "Laurent D.",
+      "initiales": "L",
+      "couleur": "#34A853",
+      "etoiles": 5,
+      "date": "2024-01-09",
+      "texte": "Très bonne prise en charge, explications claires sur ce qu'il fait et pourquoi. On repart en comprenant mieux son corps. C'est ce que j'apprécie le plus : il prend vraiment le temps.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "auteur": "Nathalie R.",
+      "initiales": "N",
+      "couleur": "#9C27B0",
+      "etoiles": 5,
+      "date": "2023-10-14",
+      "texte": "Mr Fabrié est à l'écoute et choisit chacun de ses gestes avec soin. Résultat visible dès la première séance. Je recommande chaleureusement.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "auteur": "Jean-Pierre M.",
+      "initiales": "J",
+      "couleur": "#FF5722",
+      "etoiles": 5,
+      "date": "2023-06-30",
+      "texte": "Mr Fabrié est un praticien très professionnel, bienveillant et à l'écoute. Il prend le temps d'expliquer ce qu'il fait et ça rassure beaucoup. Je recommande.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "auteur": "Emma G.",
+      "initiales": "E",
+      "couleur": "#00BCD4",
+      "etoiles": 5,
+      "date": "2023-03-11",
+      "texte": "Premier contact avec un ostéopathe, j'avais un peu appréhension. Clément a su me mettre en confiance immédiatement grâce à son approche douce et ses explications claires.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "auteur": "Antoine P.",
+      "initiales": "A",
+      "couleur": "#0F9D58",
+      "etoiles": 5,
+      "date": "2023-01-25",
+      "texte": "Très sympathique et efficace, je recommande.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "id": 11,
+      "auteur": "Lucie F.",
+      "initiales": "L",
+      "couleur": "#F4B400",
+      "etoiles": 5,
+      "date": "2022-11-08",
+      "texte": "Il prend le temps et est à l'écoute. Cabinet propre et bien situé. Je reviendrai sans hésiter.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "auteur": "Sophie M.",
+      "initiales": "S",
+      "couleur": "#DB4437",
+      "etoiles": 5,
+      "date": "2022-07-27",
+      "texte": "Très professionnel et ponctuel !",
+      "source": "ReflexOsteo",
+      "featured": false
+    },
+    {
+      "id": 13,
+      "auteur": "Marc D.",
+      "initiales": "M",
+      "couleur": "#795548",
+      "etoiles": 5,
+      "date": "2022-02-02",
+      "texte": "Très bon accueil, ponctuel, très professionnel, donne des explications et surtout efficace avec une méthode très douce. Je recommande vivement.",
+      "source": "ReflexOsteo",
+      "featured": false
+    },
+    {
+      "id": 14,
+      "auteur": "Julie B.",
+      "initiales": "J",
+      "couleur": "#607D8B",
+      "etoiles": 5,
+      "date": "2021-09-22",
+      "texte": "Très professionnel, je recommande Mr FABRIE Clément. C'était la première fois que je le consultais et il a su m'écouter attentivement avant de commencer.",
+      "source": "ReflexOsteo",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "auteur": "Philippe L.",
+      "initiales": "P",
+      "couleur": "#3F51B5",
+      "etoiles": 5,
+      "date": "2021-09-10",
+      "texte": "Étant en vacances dans la région et bloqué du dos, j'ai pris rendez-vous en urgence. Clément m'a très bien pris en charge et a su soulager mes douleurs rapidement. Merci beaucoup !",
+      "source": "ReflexOsteo",
+      "featured": false
+    }
+  ]
+}

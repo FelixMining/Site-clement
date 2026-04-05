@@ -664,94 +664,316 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ════════════════════════════════════════════
-   AVIS
+   AVIS — Google-style reviews
 ════════════════════════════════════════════ */
 .avis {
   padding: 96px 0;
   background: var(--bg-alt);
 }
 
-.avis-global {
+/* ── Bloc résumé ── */
+.avis-summary-block {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.avis-score {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-
-.avis-count {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.avis-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.avis-card {
+  gap: 40px;
   background: #fff;
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
+  padding: 32px 40px;
+  margin: 0 auto 36px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border);
+  max-width: 460px;
+}
+
+.asb-left {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.asb-big {
+  font-size: 52px;
+  font-weight: 400;
+  color: #202124;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.asb-stars {
+  color: #FBBC04;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 8px 0 4px;
+}
+
+.asb-count {
+  font-size: 13px;
+  color: #70757a;
+  white-space: nowrap;
+}
+
+.asb-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  gap: 7px;
 }
 
-.avis-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+.asb-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #70757a;
 }
 
-.avis-stars {
-  color: #F0A500;
-  font-size: 18px;
-  letter-spacing: 2px;
+.asb-label {
+  width: 8px;
+  text-align: right;
+  flex-shrink: 0;
 }
 
-.avis-text {
-  font-size: 15px;
-  font-style: italic;
-  color: var(--text);
-  line-height: 1.75;
+.asb-bar {
   flex: 1;
-  border-left: 3px solid var(--accent-light);
-  padding-left: 16px;
+  height: 8px;
+  background: #e8eaed;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.avis-author {
+.asb-fill {
+  height: 100%;
+  background: #FBBC04;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* ── Filtres et tri ── */
+.avis-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
-.avis-name {
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--primary-dark);
+.avis-filter-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.avis-source {
-  font-size: 12px;
-  color: var(--text-muted);
-  background: var(--bg-alt);
-  padding: 4px 10px;
+.afb {
+  padding: 7px 16px;
   border-radius: 100px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 13px;
+  color: var(--text);
+  transition: all var(--transition);
+  font-family: inherit;
+  line-height: 1;
 }
 
+.afb:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.afb.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.avis-sort-select {
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 13px;
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A7078' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: border-color var(--transition);
+}
+
+.avis-sort-select:hover, .avis-sort-select:focus {
+  border-color: var(--primary);
+}
+
+/* ── Grille ── */
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* ── Carte Google-style ── */
+.gc-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(60,64,67,.15), 0 1px 3px 1px rgba(60,64,67,.08);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow var(--transition);
+}
+
+.gc-card:hover {
+  box-shadow: 0 2px 6px rgba(60,64,67,.2), 0 4px 12px 3px rgba(60,64,67,.1);
+}
+
+.gc-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.gc-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+.gc-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.gc-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #202124;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gc-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.gc-stars {
+  color: #FBBC04;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.gc-date {
+  font-size: 12px;
+  color: #70757a;
+}
+
+/* Logos source */
+.gc-source {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.gc-logo-google {
+  width: 18px;
+  height: 18px;
+}
+
+.gc-source-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gc-source-badge.reflex {
+  background: #2196F3;
+}
+
+/* Texte avis */
+.gc-text {
+  font-size: 14px;
+  color: #3c4043;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.gc-text-short { display: inline; }
+.gc-text-full  { display: none; }
+
+.gc-expand-btn {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 500;
+  vertical-align: baseline;
+  margin-left: 2px;
+}
+
+.gc-expand-btn:hover { text-decoration: underline; }
+
+/* Footer carte */
+.gc-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #70757a;
+  padding-top: 10px;
+  border-top: 1px solid #f1f3f4;
+  margin-top: auto;
+}
+
+.gc-source-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #bdc1c6;
+  flex-shrink: 0;
+}
+
+/* Aucun résultat */
+.avis-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ── Lien CTA ── */
 .avis-cta-link {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 8px;
 }
 
 .avis-cta-link a {
@@ -1030,6 +1252,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .gallery-secondary img { height: 200px; }
 
   .avis-grid { grid-template-columns: 1fr 1fr; }
+  .avis-summary-block { max-width: 100%; }
+  .avis-controls { flex-direction: column; align-items: flex-start; }
 
   .contact-inner { grid-template-columns: 1fr; gap: 40px; }
   .contact-map { height: 320px; }
@@ -1063,6 +1287,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
   .avis { padding: 64px 0; }
   .avis-grid { grid-template-columns: 1fr; }
+  .avis-summary-block { flex-direction: column; gap: 20px; padding: 24px; text-align: center; }
+  .asb-right { width: 100%; }
+  .avis-filter-btns { gap: 6px; }
+  .afb { font-size: 12px; padding: 6px 12px; }
+  .avis-sort-select { font-size: 12px; }
 
   .faq { padding: 64px 0; }
 
