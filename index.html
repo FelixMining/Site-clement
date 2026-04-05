@@ -424,47 +424,46 @@
         <div class="section-header">
           <p class="section-label">Témoignages</p>
           <h2 class="section-title" id="avis-title">Ce que disent mes patients</h2>
-          <div class="avis-global">
-            <span class="stars-lg" aria-label="5 étoiles sur 5">★★★★★</span>
-            <span class="avis-score">5 / 5</span>
-            <span class="avis-count">— 35+ avis vérifiés</span>
+        </div>
+
+        <!-- Résumé global style Google -->
+        <div class="avis-summary-block">
+          <div class="asb-left">
+            <div class="asb-big">5,0</div>
+            <div class="asb-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <div class="asb-count">56 avis vérifiés</div>
+          </div>
+          <div class="asb-right" aria-label="Répartition des notes">
+            <div class="asb-bar-row"><span class="asb-label">5</span><div class="asb-bar" role="progressbar" aria-valuenow="100"><div class="asb-fill" style="width:100%"></div></div></div>
+            <div class="asb-bar-row"><span class="asb-label">4</span><div class="asb-bar" role="progressbar" aria-valuenow="0"><div class="asb-fill" style="width:0%"></div></div></div>
+            <div class="asb-bar-row"><span class="asb-label">3</span><div class="asb-bar" role="progressbar" aria-valuenow="0"><div class="asb-fill" style="width:0%"></div></div></div>
+            <div class="asb-bar-row"><span class="asb-label">2</span><div class="asb-bar" role="progressbar" aria-valuenow="0"><div class="asb-fill" style="width:0%"></div></div></div>
+            <div class="asb-bar-row"><span class="asb-label">1</span><div class="asb-bar" role="progressbar" aria-valuenow="0"><div class="asb-fill" style="width:0%"></div></div></div>
           </div>
         </div>
-        <div class="avis-grid">
-          <div class="avis-card">
-            <div class="avis-stars" aria-label="5 étoiles">★★★★★</div>
-            <blockquote class="avis-text">
-              "Très bon accueil, ponctuel, très professionnel. Il prend le temps de tout expliquer et surtout il est efficace. Je recommande vivement."
-            </blockquote>
-            <footer class="avis-author">
-              <span class="avis-name">Marie L.</span>
-              <span class="avis-source">Doctolib</span>
-            </footer>
+
+        <!-- Filtres et tri -->
+        <div class="avis-controls">
+          <div class="avis-filter-btns" role="group" aria-label="Filtrer par nombre d'étoiles">
+            <button class="afb active" data-stars="all">Tous</button>
+            <button class="afb" data-stars="5">★★★★★</button>
+            <button class="afb" data-stars="4">★★★★</button>
+            <button class="afb" data-stars="3">★★★</button>
           </div>
-          <div class="avis-card">
-            <div class="avis-stars" aria-label="5 étoiles">★★★★★</div>
-            <blockquote class="avis-text">
-              "J'ai consulté plus de 10 ostéopathes à Montpellier, et Clément est de loin le meilleur. À la fois doux, attentionné et vraiment efficace dès la première séance."
-            </blockquote>
-            <footer class="avis-author">
-              <span class="avis-name">Thomas R.</span>
-              <span class="avis-source">REFLEX OSTEO</span>
-            </footer>
-          </div>
-          <div class="avis-card">
-            <div class="avis-stars" aria-label="5 étoiles">★★★★★</div>
-            <blockquote class="avis-text">
-              "Professionnel de grande qualité, méthode douce et rassurante. Après le traitement je me sentais déjà mieux. Je reviendrai sans hésiter."
-            </blockquote>
-            <footer class="avis-author">
-              <span class="avis-name">Sophie M.</span>
-              <span class="avis-source">Doctolib</span>
-            </footer>
-          </div>
+          <select class="avis-sort-select" id="avis-sort" aria-label="Trier les avis">
+            <option value="featured">Les plus utiles</option>
+            <option value="recent">Les plus récents</option>
+            <option value="ancien">Les plus anciens</option>
+            <option value="long">Les plus détaillés</option>
+          </select>
         </div>
+
+        <!-- Grille injectée en JS -->
+        <div class="avis-grid" id="avis-container" role="list" aria-live="polite"></div>
+
         <div class="avis-cta-link">
-          <a href="https://www.doctolib.fr/osteopathe/montpellier/clement-fabrie" target="_blank" rel="noopener">
-            Voir tous les avis sur Doctolib →
+          <a href="https://www.osteopathe.do/clapiers/clement-fabrie" target="_blank" rel="noopener noreferrer">
+            Voir tous les 56 avis →
           </a>
         </div>
       </div>
