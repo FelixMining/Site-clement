@@ -1226,6 +1226,61 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ════════════════════════════════════════════
+   ZONES DESSERVIES
+════════════════════════════════════════════ */
+.zones {
+  padding: 80px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.zones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.zone-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--bg-alt);
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.zone-tag:hover {
+  border-color: var(--primary-light);
+  background: #e8f4f5;
+  color: var(--primary-dark);
+}
+
+.zone-km {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Footer mentions */
+.footer-mentions {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 6px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════════════════
    RESPONSIVE — TABLET
 ════════════════════════════════════════════ */
 @media (max-width: 960px) {
@@ -1294,6 +1349,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .avis-sort-select { font-size: 12px; }
 
   .faq { padding: 64px 0; }
+
+  .zones { padding: 64px 0; }
+  .zones-grid { gap: 8px; }
+  .zone-tag { padding: 8px 14px; font-size: 13px; }
+  .zone-km { display: none; }
 
   .contact { padding: 64px 0; }
 

@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Ressources statiques
+Allow: /assets/
+Allow: /style.css
+Allow: /script.js
+
+# Ne pas indexer les fichiers de travail internes
+Disallow: /ressoruces-brutes/
+Disallow: /search-output/
+Disallow: /architecture.md
+Disallow: /suivi-projet.md
+Disallow: /test.html
+
+# Sitemap
+Sitemap: https://clement-fabrie-osteopathe.fr/sitemap.xml
+
+# Crawl-delay pour les bots moins importants
+User-agent: Bingbot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
