@@ -141,18 +141,21 @@ if ('IntersectionObserver' in window) {
   const TRUNCATE = 160;
 
   function renderCard(avis) {
-    const isLong = avis.texte.length > TRUNCATE;
-    const short  = isLong ? avis.texte.slice(0, TRUNCATE).trimEnd() : avis.texte;
+    const texte  = avis.texte || '';
+    const isLong = texte.length > TRUNCATE;
+    const short  = isLong ? texte.slice(0, TRUNCATE).trimEnd() : texte;
 
-    const textHtml = isLong
-      ? `<span class="gc-text-short">${short}<span aria-hidden="true">…</span></span><span class="gc-text-full" hidden>${avis.texte}</span><button class="gc-expand-btn" aria-expanded="false" aria-label="Lire l'avis complet"> Plus</button>`
-      : avis.texte;
+    const textHtml = texte === ''
+      ? ''
+      : isLong
+        ? `<span class="gc-text-short">${short}<span aria-hidden="true">…</span></span><span class="gc-text-full" hidden>${texte}</span><button class="gc-expand-btn" aria-expanded="false" aria-label="Lire l'avis complet"> Plus</button>`
+        : texte;
 
     return `
       <article class="gc-card" role="listitem"
         data-stars="${avis.etoiles}"
         data-date="${avis.date}"
-        data-length="${avis.texte.length}"
+        data-length="${texte.length}"
         data-featured="${avis.featured}">
         <div class="gc-header">
           <div class="gc-avatar" style="background:${avis.couleur}" aria-hidden="true">${avis.initiales}</div>
@@ -165,7 +168,7 @@ if ('IntersectionObserver' in window) {
           </div>
           <div class="gc-source">${sourceLogo(avis.source)}</div>
         </div>
-        <p class="gc-text">${textHtml}</p>
+        ${textHtml ? `<p class="gc-text">${textHtml}</p>` : ''}
         <div class="gc-footer" aria-label="Source de l'avis">
           <div class="gc-source-dot" aria-hidden="true"></div>
           <span>Avis ${avis.source}</span>
@@ -204,14 +207,14 @@ if ('IntersectionObserver' in window) {
     if (currentSort === 'featured') {
       filtered.sort((a, b) => {
         if (a.featured !== b.featured) return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        return b.texte.length - a.texte.length;
+        return (b.texte || '').length - (a.texte || '').length;
       });
     } else if (currentSort === 'recent') {
       filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
     } else if (currentSort === 'ancien') {
       filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (currentSort === 'long') {
-      filtered.sort((a, b) => b.texte.length - a.texte.length);
+      filtered.sort((a, b) => (b.texte || '').length - (a.texte || '').length);
     }
 
     if (filtered.length === 0) {
