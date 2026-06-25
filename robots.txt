@@ -14,7 +14,7 @@ Disallow: /suivi-projet.md
 Disallow: /test.html
 
 # Sitemap
-Sitemap: https://clement-fabrie-osteopathe.fr/sitemap.xml
+Sitemap: https://osteopathe-clapiers.fr/sitemap.xml
 
 # Crawl-delay pour les bots moins importants
 User-agent: Bingbot
