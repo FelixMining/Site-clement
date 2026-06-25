@@ -1,3 +1,3 @@
 # Instructions projet
 
-- Après chaque modification et push sur une branche feature, créer automatiquement une Pull Request vers `main` sans demander confirmation.
+- Commit et push directement sur `main`, sans créer de Pull Request.
