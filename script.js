@@ -222,7 +222,7 @@ if ('IntersectionObserver' in window) {
       return;
     }
 
-    container.innerHTML = filtered.map(renderCard).join('');
+    container.innerHTML = filtered.slice(0, 10).map(renderCard).join('');
     applyExpandListeners();
     applyReveal();
   }
