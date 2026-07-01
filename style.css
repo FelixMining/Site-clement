@@ -971,6 +971,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ── Lien CTA ── */
+.avis-google-link {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.avis-google-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.avis-google-link a:hover { color: var(--primary); }
+
 .avis-cta-link {
   text-align: center;
   margin-top: 8px;
