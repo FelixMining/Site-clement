@@ -664,6 +664,63 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ════════════════════════════════════════════
+   GALERIE SOINS
+════════════════════════════════════════════ */
+.soins-gallery {
+  padding: 96px 0;
+  background: var(--bg-alt);
+}
+
+.soins-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.sg-main {
+  grid-row: 1 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.sg-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sg-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sg-side img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.sg-bottom {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.sg-bottom img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ════════════════════════════════════════════
    AVIS — Google-style reviews
 ════════════════════════════════════════════ */
 .avis {
