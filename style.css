@@ -330,7 +330,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hero-image-wrap {
   position: relative;
-  border-radius: 28px 28px 120px 28px;
+  border-radius: 120px 120px 120px 120px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4/5;
