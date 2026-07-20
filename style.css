@@ -637,6 +637,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 16px;
 }
 
+.gallery-single {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-single img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
 .gallery-main {
   border-radius: var(--radius-lg);
   overflow: hidden;
